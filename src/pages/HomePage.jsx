@@ -1,3 +1,5 @@
+import Banner from "../components/Banner";
+import Nav from "../components/Nav";
 import { useMovie } from "../hooks/useMovie";
 
 const HomePage = () => {
@@ -5,6 +7,8 @@ const HomePage = () => {
 
   return (
     <>
+      <Nav />
+      <Banner />
       {movie.map((oneMovie, index) => {
         return (
           <div key={index} className="col-3 px-3 pt-4">
