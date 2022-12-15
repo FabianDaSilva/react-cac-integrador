@@ -9,7 +9,7 @@
   transition: all 0.5s;
 }
 .nav__black {
-  background-color: black;
+  background-color: #0c0c0c;
 }
 .nav .nav__logo {
   position: fixed;
@@ -24,4 +24,26 @@
   width: 30px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.row {
+  background-color: #141414;
+}
+.row__movies {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.row__movies--img {
+  width: 100%;
+  max-height: 250px;
+  margin-right: 10px;
+  border-radius: 0.2vw;
+}
+.row__movies--img:hover {
+  transform: scale(1.08);
+}
+.row ::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+.row {
+  background-color: #141414;
+
+  &__movies {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    &--img {
+      width: 100%;
+      max-height: 250px;
+      margin-right: 10px;
+      border-radius: 0.2vw;
+    }
+    &--img:hover {
+      transform: scale(1.08);
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
