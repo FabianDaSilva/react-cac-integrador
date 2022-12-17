@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
 
-import { useMovieBanner } from "../hooks";
+import { useMovie } from "../hooks";
 
 const Card = ({ oneMovie }) => {
   const [modal, setModal] = useState(false);
@@ -12,7 +12,7 @@ const Card = ({ oneMovie }) => {
     setModal(!modal);
   };
 
-  const movie = useMovieBanner("movie");
+  const movie = useMovie("movie");
 
   return (
     <>
