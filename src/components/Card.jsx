@@ -3,16 +3,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
 
-import { useMovie } from "../hooks";
-
 const Card = ({ oneMovie }) => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
   };
-
-  const movie = useMovie("movie");
 
   return (
     <>
@@ -27,7 +23,17 @@ const Card = ({ oneMovie }) => {
         <div className="modal">
           <div className="overlay" onClick={toggleModal}>
             <div className="modal-content">
-              <h1> {movie?.title || movie?.name || movie?.orignal_name}</h1>
+              <div className="modal-content--img">
+                <img
+                  alt={oneMovie.title}
+                  src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
+                  onClick={toggleModal}
+                />
+              </div>
+              <h1>
+                {oneMovie?.title || oneMovie?.name || oneMovie?.orignal_name}
+              </h1>
+              <p>{oneMovie?.overview}</p>
             </div>
           </div>
         </div>

@@ -1,14 +1,18 @@
 import { Banner, Nav, Row } from "../components";
-import { useMovie } from "../hooks";
+import { Request } from "../services";
 
 const HomePage = () => {
-  const movie = useMovie("movie");
-
   return (
     <>
       <Nav />
       <Banner />
-      <Row movie={movie} />
+      <Row fetchUrl={Request.fetchTrending} title="TRENDING NOW" />
+      <Row fetchUrl={Request.fetchTopRated} title="Top Rated" />
+      <Row fetchUrl={Request.fetchActionMovies} title="Action Movies" />
+      <Row fetchUrl={Request.fetchComedyMovies} title="Comedy Movies" />
+      <Row fetchUrl={Request.fetchHorrorMovies} title="Horror Movies" />
+      <Row fetchUrl={Request.fetchRomanceMovies} title="Romance Movies" />
+      <Row fetchUrl={Request.fetchDocumentaries} title="Documentaries" />
     </>
   );
 };
