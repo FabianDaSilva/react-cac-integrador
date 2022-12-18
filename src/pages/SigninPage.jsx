@@ -55,7 +55,7 @@ const SigninPage = () => {
                     <input type="password" placeholder="Password" autoComplete="off"
                         value={password} onChange={({ target }) => setPassword(target.value)}
                     />
-                    <button disabled={isInvalid} type="submit">
+                    <button className='btn-form' disabled={isInvalid} type="submit">
                         SignIn
                     </button>
                 </form>

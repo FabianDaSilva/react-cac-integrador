@@ -72,7 +72,7 @@ input:last-of-type {
     margin-bottom: 30px;
 }
 
-button {
+.btn-form{
     background: #e50914;
     border-radius: 4px;
     height: 50px;
