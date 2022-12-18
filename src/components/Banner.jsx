@@ -1,6 +1,4 @@
-import React from "react";
-
-import { useMovieBanner } from "../hooks/useMovie";
+import { useMovieBanner } from "../hooks";
 
 const Banner = () => {
   //*Llamo el hook "useMovieBanner" para que me renderize de forma aleatoria el banner de la app*/
@@ -21,7 +19,6 @@ const Banner = () => {
       <h1 className="banner__title">
         {movie?.title || movie?.name || movie?.orignal_name}
       </h1>
-     
     </header>
   );
 };

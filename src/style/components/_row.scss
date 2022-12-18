@@ -1,0 +1,64 @@
+.row {
+  background-color: #141414;
+
+  &__movies {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    &--img {
+      width: 100%;
+      max-height: 250px;
+      margin-right: 10px;
+      border-radius: 0.2vw;
+    }
+    &--img:hover {
+      transform: scale(1.08);
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.modal {
+  max-width: 850px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1.4;
+      background: #181818;
+      padding: 14px 28px;
+      border-radius: 3px;
+      max-width: 550px;
+      min-width: 300px;
+      &--img {
+        max-width: 550px;
+        min-height: 300px;
+        display: grid;
+        justify-content: center;
+        & > img {
+          width: 450px;
+        }
+      }
+    }
+  }
+}
