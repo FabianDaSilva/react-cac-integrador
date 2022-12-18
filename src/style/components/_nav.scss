@@ -15,10 +15,25 @@
         width: 80px;
         object-fit: contain;
       }
-      .nav__avatar {
+      .nav__signin {
         position: fixed;
-        right: 20px;
-        width: 30px;
-        object-fit: contain;
+        right: 60px;
+        color: white;
+        background-color: #e50914;
+        border: none;
+        font-size: 15px;
+        border-radius: 3px;
+        padding: 8px 17px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f40612;
       }
+      }
+        .nav__avatar {
+          position: fixed;
+          right: 20px;
+          width: 30px;
+          object-fit: contain;
+        }
 }
