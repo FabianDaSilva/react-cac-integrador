@@ -6,13 +6,13 @@ const HomePage = () => {
     <>
       <Nav />
       <Banner />
-      <Row fetchUrl={Request.fetchTrending} title="Treding Now" />
-      <Row fetchUrl={Request.fetchTopRated} title="Top Rated" />
-      <Row fetchUrl={Request.fetchActionMovies} title="Action Movies" />
-      <Row fetchUrl={Request.fetchComedyMovies} title="Comedy Movies" />
-      <Row fetchUrl={Request.fetchHorrorMovies} title="Horror Movies" />
-      <Row fetchUrl={Request.fetchRomanceMovies} title="Romance Movies" />
-      <Row fetchUrl={Request.fetchDocumentaries} title="Documentaries" />
+      <Row fetchUrl={Request.fetchTrending} title="Novedades populares" />
+      <Row fetchUrl={Request.fetchTopRated} title="Más vistos" />
+      <Row fetchUrl={Request.fetchActionMovies} title="Acción" />
+      <Row fetchUrl={Request.fetchComedyMovies} title="Comedia" />
+      <Row fetchUrl={Request.fetchHorrorMovies} title="Terror" />
+      <Row fetchUrl={Request.fetchRomanceMovies} title="Romance" />
+      <Row fetchUrl={Request.fetchDocumentaries} title="Documentales" />
     </>
   );
 };
