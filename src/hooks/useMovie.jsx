@@ -15,7 +15,7 @@ export function useMovie({ fetchUrl }) {
         const apiData = response.data;
 
         setMovie(apiData.results);
-      /*   console.log(apiData.results); */
+        /*   console.log(apiData.results); */
       })
       .catch((error) => {
         console.error(`El error esta en: ${error}`);
@@ -46,7 +46,7 @@ export function useMovieBanner() {
       .catch((error) => {
         console.error(`El error esta en: ${error}`);
       });
-  }, [setMovie]);
+  }, [endPoint]);
 
   return movie;
 }

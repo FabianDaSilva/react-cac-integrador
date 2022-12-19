@@ -6,7 +6,7 @@ const HomePage = () => {
     <>
       <Nav />
       <Banner />
-      <Row fetchUrl={Request.fetchTrending} title="TRENDING NOW" />
+      <Row fetchUrl={Request.fetchTrending} title="Treding Now" />
       <Row fetchUrl={Request.fetchTopRated} title="Top Rated" />
       <Row fetchUrl={Request.fetchActionMovies} title="Action Movies" />
       <Row fetchUrl={Request.fetchComedyMovies} title="Comedy Movies" />

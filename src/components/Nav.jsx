@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import './../style/components/_nav.scss'
-import { useNavigate } from "react-router-dom";
+import "./../style/components/_nav.scss";
 
 const Nav = () => {
   const [show, handleshow] = useState(false);
@@ -15,12 +14,6 @@ const Nav = () => {
     };
   }, []);
 
-  const navigate = useNavigate();
-
-  const navigateToSignin = () => {
-    navigate('/signin');
-  };
-
   return (
     <div className={`nav ${show && "nav__black"}`}>
       <img
@@ -28,8 +21,6 @@ const Nav = () => {
         className="nav__logo"
         src="https://res.cloudinary.com/dew1za4wz/image/upload/v1670898666/plants/React/Netflix_2015_logo.svg_pffsfl.png"
       />
-
-      <button className="nav__signin" onClick={ navigateToSignin }>Sign In</button>
 
       <img
         alt="Netflix Profile"

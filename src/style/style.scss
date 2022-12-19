@@ -1,5 +1,9 @@
 //*COMPONENTS*/
 @import "./components/nav";
 @import "./components/row";
+@import "./components/modal";
 //*PAGES*/
 @import "./components/homePage";
+@import "./pages/singInPage.scss";
+ //*Reset*/
+  @import "./base/reset";

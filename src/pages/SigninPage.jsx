@@ -24,7 +24,7 @@ const SigninPage = () => {
         signInWithEmailAndPassword(auth, emailAddress, password)
         .then(() => {
             //TODO: push to the browse page
-            navigate('/');
+            navigate('/home');
         })
         .catch((error) => {
             setEmailAddress('');

@@ -8,17 +8,24 @@ const Banner = () => {
   return (
     <header
       style={{
-        backgroundSize: "cover",
-        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-        backgroundPosition: "center center",
-        height: "400px",
+        maxHeight: "500px",
+        margin: "0px",
+        width: "100%",
+        height: "100%",
       }}
     >
-      <p>HOla</p>
-      <img alt="" src="" />
-      <h1 className="banner__title">
-        {movie?.title || movie?.name || movie?.orignal_name}
-      </h1>
+      <img
+        alt=""
+        src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+        style={{
+          backgroundSize: "cover",
+          width: "100%",
+          height: "100%",
+          maxHeight: "500px",
+          objectFit: "cover",
+          backgroundImage: "center center",
+        }}
+      />
     </header>
   );
 };

@@ -1,0 +1,50 @@
+.modal {
+  max-width: 850px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1.4;
+      background: #181818;
+      padding: 14px 28px;
+      border-radius: 3px;
+      max-width: 550px;
+      min-width: 300px;
+      h2 {
+        color: white;
+        font-family: "BoldN", sans-serif;
+      }
+      p {
+        color: white;
+        font-family: "BoldN", sans-serif;
+        font-size: 14px;
+      }
+      &--img {
+        max-width: 550px;
+        min-height: 300px;
+        display: grid;
+        justify-content: center;
+        & > img {
+          width: 450px;
+        }
+      }
+    }
+  }
+}
