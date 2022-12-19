@@ -31,3 +31,4 @@
 <li>npm run dev (Para correr el proyecto)</li>
 </ul>
 <hr>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/08c28e86-2edc-400b-ba3c-5740a5f0f4b2/deploy-status)](https://app.netlify.com/sites/netflixclone-cac-2022/deploys)
