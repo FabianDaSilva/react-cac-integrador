@@ -14,6 +14,8 @@ const Nav = () => {
     };
   }, []);
 
+  const user = sessionStorage.getItem("user");
+
   return (
     <div className={`nav ${show && "nav__black"}`}>
       <img
@@ -22,11 +24,9 @@ const Nav = () => {
         src="https://res.cloudinary.com/dew1za4wz/image/upload/v1670898666/plants/React/Netflix_2015_logo.svg_pffsfl.png"
       />
 
-      <img
-        alt="Netflix Profile"
-        className="nav__avatar"
-        src="https://res.cloudinary.com/dew1za4wz/image/upload/v1670898666/plants/React/366be133850498.56ba69ac36858_ds0g7x.png"
-      />
+      <div className="nav__avatar">
+        {user[0].toUpperCase()}
+      </div>
     </div>
   );
 };

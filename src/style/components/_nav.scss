@@ -32,8 +32,19 @@
       }
         .nav__avatar {
           position: fixed;
+          background-color: #f40612;
           right: 20px;
-          width: 30px;
+          top: 15px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          color: white;
           object-fit: contain;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          font-weight: 600;
+          font-size: 26px;
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 }

@@ -1,5 +1,5 @@
-import { useState, useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useState, useContext } from 'react';
+import { useNavigate, Link, Navigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import { FirebaseContext } from "../context/firebase";
@@ -17,34 +17,43 @@ const SigninPage = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
 
-    // Initialize Firebase Authentication and get a reference to the service
-    const auth = getAuth(firebase);
+        // Initialize Firebase Authentication and get a reference to the service
+        const auth = getAuth(firebase);
+        
+        // firebase work here!
+        signInWithEmailAndPassword(auth, emailAddress, password)
+        .then((userCredential) =>  {
+            
+            const user = userCredential.user.email;
+            
+            sessionStorage.setItem('user', user);
 
-    // firebase work here!
-    signInWithEmailAndPassword(auth, emailAddress, password)
-      .then(() => {
-        //TODO: push to the browse page
-        navigate("/home");
-      })
-      .catch((error) => {
-        setEmailAddress("");
-        setPassword("");
-        setError(error.message);
-      });
-  };
+            navigate('/home');
+           
+        })
+        .catch((error) => {
+            setEmailAddress('');
+            setPassword('');
+            setError(error.message);
+        });
+    };
 
-  return (
-    <div>
-      <div className="nav">
-        <img
-          alt="Netflix Logo"
-          className="nav__logo"
-          src="https://res.cloudinary.com/dew1za4wz/image/upload/v1670898666/plants/React/Netflix_2015_logo.svg_pffsfl.png"
-        />
-      </div>
+    const loggedIn = sessionStorage.getItem("user");
 
-      <div className="form-container">
-        <h1>Sign In</h1>
+    return (
+        loggedIn
+        ? <Navigate to='/home'/>
+        :<div>
+            <div className='nav'>
+                <img
+                    alt="Netflix Logo"
+                    className="nav__logo"
+                    src="https://res.cloudinary.com/dew1za4wz/image/upload/v1670898666/plants/React/Netflix_2015_logo.svg_pffsfl.png"
+                    />
+            </div>
+            
+            <div className='form-container'>
+                <h1>Sign In</h1>
 
         {error && <div className="error">{error}</div>}
 
