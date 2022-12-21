@@ -1,9 +1,15 @@
+import { Navigate } from "react-router";
+
 import { Banner, Nav, Row } from "../components";
 import { Request } from "../services";
 
 const HomePage = () => {
+
+  const loggedIn = sessionStorage.getItem("user");
+  
   return (
-    <>
+    loggedIn
+    ? <>
       <Nav />
       <Banner />
       <Row fetchUrl={Request.fetchTrending} title="Treding Now" />
@@ -14,6 +20,7 @@ const HomePage = () => {
       <Row fetchUrl={Request.fetchRomanceMovies} title="Romance Movies" />
       <Row fetchUrl={Request.fetchDocumentaries} title="Documentaries" />
     </>
+    : <Navigate to='/signin'/>
   );
 };
 

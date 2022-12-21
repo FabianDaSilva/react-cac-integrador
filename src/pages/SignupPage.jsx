@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, Navigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { FirebaseContext } from "../context/firebase";
@@ -24,11 +24,12 @@ const SignupPage = () => {
     // firebase work here!
     createUserWithEmailAndPassword(auth, emailAddress, password)
       .then((userCredential) => {
-        //TODO: update profile to user's profile
-        const user = userCredential.user;
 
-        //TODO: push to the browse page
-        navigate("/signup");
+        const user = userCredential.user.email;
+        
+        sessionStorage.setItem('user', user);
+
+        navigate("/home");
       })
       .catch((error) => {
         setFirstName("");
@@ -38,8 +39,12 @@ const SignupPage = () => {
       });
   };
 
+  const loggedIn = sessionStorage.getItem("user");
+
   return (
-    <div>
+    loggedIn
+    ?<Navigate to='/home'/>
+    :<div>
       <div className="nav">
         <img
           alt="Netflix Logo"
